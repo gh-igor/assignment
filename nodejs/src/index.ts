@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 
 app.get('/posts', (req, res) => {
-    assignmentClient.get<PostsDto>('posts')
+    assignmentClient.get<PostsDto>('posts', { params: { page: req.query.page} })
         .then(response => {
             res.status(200).json(response.data.data.posts);
         })

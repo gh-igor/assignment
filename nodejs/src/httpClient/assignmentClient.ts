@@ -30,7 +30,7 @@ assignmentClient.interceptors.request.use(
         const search = config.url.match(/\?(.*)/)?.[1];
         const url = config.url.match(/(.*)(\?)/)?.[1] ?? config.url;
 
-        const searchObject = queryString.parse(search);
+        const searchObject = { ...config.params, ...queryString.parse(search) };
         let token = getToken();
         if (!token) {
             console.log('token is not found');
