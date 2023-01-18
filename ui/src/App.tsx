@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
+import PostList from "./components/postList/PostList";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
-  return (
-    <div></div>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <PostList />
+        </QueryClientProvider>
+    );
 }
 
 export default App;
