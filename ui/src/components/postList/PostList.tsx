@@ -1,8 +1,12 @@
 import React from "react";
 import useGetPosts from "../../api/useGetPosts";
 
-const PostList = () => {
-    const { data, isLoading, error } = useGetPosts();
+type Props = {
+    page: number;
+};
+
+const PostList = ({ page }: Props) => {
+    const { data, isLoading, error } = useGetPosts({ page });
 
     return (
         <>
