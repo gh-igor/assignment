@@ -9,7 +9,7 @@ const ITEMS_PER_PAGE = 100;
 
 const Posts = () => {
     const [page, setPage] = useState(1);
-    const { data, isLoading } = useGetPosts({ page });
+    const { data, isLoading, error } = useGetPosts({ page });
 
     const onNextClick = () => {
         setPage(page + 1);
@@ -29,7 +29,8 @@ const Posts = () => {
                 </div>
                 <div className={styles.postListWrapper}>
                     <h3>List:</h3>
-                    <PostList page={page} />
+                    {isLoading && <div>Loading...</div>}
+                    {!isLoading && data && <PostList posts={data} />}
                 </div>
             </div>
             <div className={styles.paginationWrapper}>
@@ -42,6 +43,7 @@ const Posts = () => {
                     onNextClick={onNextClick}
                 />
             </div>
+            {error && <div>{(error as Error).message}</div>}
         </>
     );
 }
