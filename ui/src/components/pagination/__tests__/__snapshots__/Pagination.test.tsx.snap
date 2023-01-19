@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Pagination matches snapshot 1`] = `
+Array [
+  <button
+    onClick={[MockFunction]}
+  >
+    &lt; previous
+  </button>,
+  <span>
+     -= 
+    3
+     =- 
+  </span>,
+]
+`;

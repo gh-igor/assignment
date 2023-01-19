@@ -31,7 +31,10 @@
       "react-app/jest"
     ],
     "rules": {
-      "quotes": ["error", "double"]
+      "quotes": [
+        "error",
+        "double"
+      ]
     }
   },
   "browserslist": {
@@ -45,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0",
+    "react-test-renderer": "^18.2.0"
   }
 }

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Dashboard matches snapshot 1`] = `
+<ul>
+  <li>
+    <strong>
+      user_16
+    </strong>
+    <div>
+      postsTotalCount: 
+      <strong>
+        1
+      </strong>
+    </div>
+    <div>
+      postCharactersMedian: 
+      <strong>
+        694
+      </strong>
+    </div>
+    <ul>
+      postsPerMonth: 
+      <li>
+        <div>
+          January
+          : 
+          <strong>
+            1
+          </strong>
+        </div>
+      </li>
+    </ul>
+    <div>
+      longestPost: 
+      dead press adoption inn thin thumb horseshoe uncle seed inquiry heal bay climate freedom slap thoughtful queen company acquisition abuse squash pattern peasant condition export assessment raid helmet linen water flat dirty fling chord correction ethics murder reconcile virgin letter swallow bullet norm experiment damage dirty gravel manage refuse refuse tap velvet relax provide line speculate bend traction tired transport charter delay pick notice lion coincide initiative modernize option bake risk popular delete roar beer agreement debt tumour lie stress key glow lot reconcile patch fountain competition allocation eject golf south belly corn lion golf trench mug carry relation kinship
+    </div>
+  </li>
+  <li>
+    <strong>
+      user_19
+    </strong>
+    <div>
+      postsTotalCount: 
+      <strong>
+        1
+      </strong>
+    </div>
+    <div>
+      postCharactersMedian: 
+      <strong>
+        228
+      </strong>
+    </div>
+    <ul>
+      postsPerMonth: 
+      <li>
+        <div>
+          January
+          : 
+          <strong>
+            1
+          </strong>
+        </div>
+      </li>
+    </ul>
+    <div>
+      longestPost: 
+      mess money hate conductor company duck indulge fly seller neighborhood rush message flush empire upset due climate opposition virgin shy dimension tolerate horror wagon run accumulation huge complex mother resource core era cash
+    </div>
+  </li>
+  <li>
+    <strong>
+      user_0
+    </strong>
+    <div>
+      postsTotalCount: 
+      <strong>
+        1
+      </strong>
+    </div>
+    <div>
+      postCharactersMedian: 
+      <strong>
+        307
+      </strong>
+    </div>
+    <ul>
+      postsPerMonth: 
+      <li>
+        <div>
+          January
+          : 
+          <strong>
+            1
+          </strong>
+        </div>
+      </li>
+    </ul>
+    <div>
+      longestPost: 
+      leaflet execute systematic corn avenue porter attention kit horseshoe trench constitution canvas representative fill nest racism occasion crystal resign lake umbrella revolution tile snack cottage carve mess accountant tired faithful aluminium competition follow variant button basket advice withdrawal bury
+    </div>
+  </li>
+</ul>
+`;
