@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import PostList from "../components/postList/PostList";
 import Pagination from "../components/pagination/Pagination";
 import useGetPosts from "../api/useGetPosts";
@@ -7,17 +7,19 @@ import styles from "./posts.module.css";
 
 const ITEMS_PER_PAGE = 100;
 
+const PaginationMemo = memo(Pagination);
+
 const Posts = () => {
     const [page, setPage] = useState(1);
     const { data, isLoading, error } = useGetPosts({ page });
 
-    const onNextClick = () => {
-        setPage(page + 1);
-    };
+    const onNextClick = useCallback(() => {
+        setPage(prevPage => prevPage + 1);
+    }, []);
 
-    const onPreviousClick = () => {
-        setPage(page - 1);
-    }
+    const onPreviousClick = useCallback(() => {
+        setPage(prevPage => prevPage - 1);
+    }, []);
 
     return (
         <>
@@ -35,7 +37,7 @@ const Posts = () => {
             </div>
             <div className={styles.paginationWrapper}>
                 <h3>Pagination:</h3>
-                <Pagination
+                <PaginationMemo
                     currentPage={page}
                     itemsPerPageMax={ITEMS_PER_PAGE}
                     itemsLength={data?.length}
