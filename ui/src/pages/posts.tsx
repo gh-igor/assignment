@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import PostList from "../components/postList/PostList";
 import Pagination from "../components/pagination/Pagination";
 import useGetPosts from "../api/useGetPosts";
+import Dashboard from "../components/dashboard/Dashboard";
 import styles from "./posts.module.css";
 
 const ITEMS_PER_PAGE = 100;
 
 const Posts = () => {
     const [page, setPage] = useState(1);
-    const { data } = useGetPosts({ page });
+    const { data, isLoading } = useGetPosts({ page });
 
     const onNextClick = () => {
         setPage(page + 1);
@@ -20,10 +21,19 @@ const Posts = () => {
 
     return (
         <>
-            <div className={styles.postListWrapper}>
-                <PostList page={page} />
+            <div className={styles.content}>
+                <div className={styles.dashboardWrapper}>
+                    <h3>Dashboard:</h3>
+                    {isLoading && <div>Loading...</div>}
+                    {!isLoading && data && <Dashboard posts={data} />}
+                </div>
+                <div className={styles.postListWrapper}>
+                    <h3>List:</h3>
+                    <PostList page={page} />
+                </div>
             </div>
             <div className={styles.paginationWrapper}>
+                <h3>Pagination:</h3>
                 <Pagination
                     currentPage={page}
                     itemsPerPageMax={ITEMS_PER_PAGE}

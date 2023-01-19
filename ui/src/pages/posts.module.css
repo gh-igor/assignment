@@ -1,5 +1,13 @@
+.content {
+    display: flex;
+    height: calc(100vh - 200px);
+}
+
+.dashboardWrapper {
+    overflow-y: auto;
+}
+
 .postListWrapper {
-    height: 400px;
     overflow-y: auto;
 }
 
