@@ -1,3 +1,5 @@
 node_modules
 scratch
 dist
+install.log
+server.log
