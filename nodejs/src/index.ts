@@ -9,7 +9,9 @@ const port = process.env.PORT;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+}));
 
 app.get('/posts', (req, res) => {
     assignmentClient.get<PostsDto>('posts', { params: { page: req.query.page} })
